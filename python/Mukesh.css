@@ -1,0 +1,24 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#name {
+    color: darkblue;
+    font-size: 36px;
+}
+
+.bio {
+    background-color: white;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.bio p {
+    font-size: 18px;
+    color: black;
+}
