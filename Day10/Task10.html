@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini eCommerce Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Header - Flexbox */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#222;
+    color:white;
+    padding:15px 30px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Product Grid - CSS Grid */
+.products{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    padding:15px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.price{
+    color:green;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">ShopEasy</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Cart</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- Product Grid -->
+<section class="products">
+
+    <div class="card">
+        <img src="Bluetoothspeaker.jpg" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p class="price">₹499</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Buds.jpg" alt="Buds">
+        <h3>Buds</h3>
+        <p class="price">₹699</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Headphones.jpg" alt="Headphones">
+        <h3>Headphones</h3>
+        <p class="price">₹899</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Smartwatch.jpg" alt="Smartwatch">
+        <h3>Smartwatch</h3>
+        <p class="price">₹999</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="sunglasses.jpg" alt="Sunglasses">
+        <h3>Sunglasses</h3>
+        <p class="price">₹1,299</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Wirelessmouse.jpg" alt="Wireless Mouse">
+        <h3>Wireless Mouse</h3>
+        <p class="price">₹1,499</p>
+        <button>Buy Now</button>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 BuyEasy. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

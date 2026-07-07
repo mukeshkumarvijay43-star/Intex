@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uneven Grid Layout</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            padding:20px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+        .grid-container{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:100px 200px 150px; /* Different row sizes */
+            gap:15px;
+        }
+
+        .item{
+            background:steelblue;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size:20px;
+            border-radius:8px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Uneven Grid Layout</h2>
+
+<div class="grid-container">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+</div>
+
+</body>
+</html>

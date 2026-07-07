@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+/* Main Layout */
+.dashboard{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    min-height:100vh;
+}
+
+/* Sidebar */
+.sidebar{
+    background:#2c3e50;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:15px 0;
+}
+
+.sidebar ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+/* Content Area */
+.content{
+    padding:20px;
+}
+
+.content h1{
+    margin-bottom:20px;
+}
+
+/* Cards Grid */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#333;
+}
+
+.card p{
+    font-size:24px;
+    font-weight:bold;
+    color:#007bff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>1,250</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Orders</h3>
+                <p>540</p>
+            </div>
+
+            <div class="card">
+                <h3>Revenue</h3>
+                <p>₹95,000</p>
+            </div>
+
+            <div class="card">
+                <h3>Products</h3>
+                <p>180</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Orders</h3>
+                <p>32</p>
+            </div>
+
+            <div class="card">
+                <h3>Customers</h3>
+                <p>875</p>
+            </div>
+        </div>
+    </main>
+
+</div>
+
+</body>
+</html>
