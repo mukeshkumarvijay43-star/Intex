@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Animations</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#121212;
+    color:#fff;
+    padding:40px;
+}
+
+/* Cards */
+.container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1f1f1f;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+    transition:transform .4s ease, box-shadow .4s ease, background .4s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 15px 30px rgba(0,191,255,.5);
+    background:#2c2c2c;
+}
+
+/* Button */
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    background:#00bfff;
+    color:#000;
+    cursor:pointer;
+    transition:transform .3s ease, background .3s ease;
+}
+
+button:hover{
+    background:#0099cc;
+    transform:scale(1.08);
+}
+
+/* Navbar */
+nav{
+    background:#1f1f1f;
+    padding:15px;
+    margin-bottom:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin:0 15px;
+    padding:8px 12px;
+    border-radius:5px;
+    transition:background .3s ease, color .3s ease;
+}
+
+nav a:hover{
+    background:#00bfff;
+    color:#000;
+}
+
+/* Image */
+img{
+    width:100%;
+    border-radius:10px;
+    transition:transform .4s ease;
+}
+
+img:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <img src="Mukesh.jpeg" alt="Image">
+        <h2>Web Design</h2>
+        <p>Modern responsive websites.</p>
+        <button>Learn More</button>
+    </div>
+
+    <div class="card">
+        <img src="Boy.jpg" alt="Image">
+        <h2>SEO</h2>
+        <p>Improve website visibility.</p>
+        <button>Learn More</button>
+    </div>
+
+    <div class="card">
+        <img src="Girl.jpg" alt="Image">
+        <h2>Development</h2>
+        <p>Fast and secure web applications.</p>
+        <button>Learn More</button>
+    </div>
+
+</div>
+
+</body>
+</html>

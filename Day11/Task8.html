@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Area Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Grid Container */
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        /* Content */
+        .content {
+            grid-area: content;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>My Website</h2>
+        </div>
+
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="content">
+            <h2>Welcome to Our Website</h2>
+
+            <p>Welcome to our website! We provide quality information and services for our visitors.</p>
+
+            <p>Explore our pages to learn more about our company, our services, and our latest updates.</p>
+
+            <p>Our goal is to create modern, user-friendly, and responsive websites using HTML, CSS, and JavaScript.</p>
+
+            <p>Thank you for visiting our website. We hope you have a great experience!</p>
+        </div>
+
+        <div class="footer">
+            © 2026 My Website. All Rights Reserved.
+        </div>
+
+    </div>
+
+</body>
+</html>

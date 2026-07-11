@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services with Icons</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.card h2{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+}
+</style>
+</head>
+<body>
+
+<h1>Our Services</h1>
+
+<section class="services">
+
+    <div class="card">
+        <div class="icon">💻</div>
+        <h2>Web Development</h2>
+        <p>Build fast, responsive, and modern websites.</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">📱</div>
+        <h2>Responsive Design</h2>
+        <p>Websites that work perfectly on all devices.</p>
+    </div>
+
+    <div class="card">
+        <div class="icon">🚀</div>
+        <h2>SEO Optimization</h2>
+        <p>Improve your website's visibility and ranking.</p>
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Grid Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 10px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        /* Content */
+        .content {
+            grid-area: content;
+            background-color: #fafafa;
+            padding: 20px;
+        }
+
+        .project {
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h2>Mukesh Kumar</h2>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Flexbox</li>
+            <li>CSS Grid</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h3>Social Links</h3>
+        <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A personal portfolio website built using HTML and CSS.</p>
+        </div>
+
+        <div class="project">
+            <h3>E-Commerce Page</h3>
+            <p>An online shopping page with a responsive product grid.</p>
+        </div>
+
+        <div class="project">
+            <h3>Admin Dashboard</h3>
+            <p>A dashboard interface created using CSS Grid and Flexbox.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Contact: mukeshkumarvijay6@gmail.com | +91 99949 90241
+    </div>
+
+</div>
+
+</body>
+</html>

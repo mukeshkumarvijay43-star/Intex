@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Card Layout</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .card h3 {
+        margin: 15px 0 10px;
+    }
+
+    .card p {
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    .card button {
+        padding: 10px 20px;
+        border: none;
+        background: #007BFF;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .card button:hover {
+        background: #0056b3;
+    }
+
+    /* Tablet */
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Mobile */
+    @media (max-width: 480px) {
+        .container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <img src="Mukesh.jpeg" alt="Card Image">
+        <h3>Mukesh Kumar</h3>
+        <p>Software Engineer</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="card">
+        <img src="Boy.jpg" alt="Card Image">
+        <h3>John Doe</h3>
+        <p>Web Developer</p>
+        <button>Read More</button>
+    </div>
+
+    <div class="card">
+        <img src="Girl.jpg" alt="Card Image">
+        <h3>Priya</h3>
+        <p>UI/UX Designer</p>
+        <button>Read More</button>
+    </div>
+</div>
+
+</body>
+</html>

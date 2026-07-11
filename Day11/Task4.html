@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Empty Space Example</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: 80px 250px 60px;
+            grid-template-areas:
+                "header header header"
+                "sidebar content ."
+                "footer footer footer";
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background: navy;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: lightgray;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background: lightblue;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">Header</div>
+
+        <div class="sidebar">Sidebar</div>
+
+        <div class="content">Content</div>
+
+        <div class="footer">Footer</div>
+    </div>
+
+</body>
+</html>

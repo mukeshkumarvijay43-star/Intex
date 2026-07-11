@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Profile Page</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        padding: 20px;
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #fff;
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        gap: 20px;
+    }
+
+    .profile img {
+        width: 200px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .profile-content {
+        text-align: center;
+    }
+
+    .profile-content h1 {
+        margin-bottom: 10px;
+    }
+
+    .profile-content p {
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* Desktop View */
+    @media (min-width: 768px) {
+        .profile {
+            flex-direction: row;
+            align-items: center;
+            text-align: left;
+        }
+
+        .profile-content {
+            text-align: left;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="profile">
+    <img src="Mukesh.jpeg" alt="Profile Photo">
+
+    <div class="profile-content">
+        <h1>Mukesh Kumar</h1>
+        <h3>Web Developer</h3>
+        <p>
+            Hello! I'm Mukesh Kumar, a passionate web developer with experience
+            in HTML, CSS, JavaScript, and responsive web design. I enjoy building
+            clean, modern, and user-friendly websites that work well on both
+            mobile and desktop devices.
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

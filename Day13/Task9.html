@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cards with Shadow Effect</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+
+    /* Shadow Effect */
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+
+    /* Smooth Animation */
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    border-radius:8px;
+}
+
+.card h3{
+    margin:15px 0 10px;
+}
+
+.card p{
+    color:#555;
+}
+</style>
+</head>
+<body>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Bluetoothspeaker.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>This card has a shadow effect.</p>
+    </div>
+
+    <div class="card">
+        <img src="Wirelessmouse.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Hover over this card to see the animation.</p>
+    </div>
+
+    <div class="card">
+        <img src="Headphones.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Responsive card with shadow styling.</p>
+    </div>
+
+</div>
+
+</body>
+</html>

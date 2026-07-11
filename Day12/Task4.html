@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive 2-Column Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .left {
+            flex: 1;
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .right {
+            flex: 2;
+            background-color: lightgreen;
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center;">Responsive 2-Column Layout</h1>
+
+    <div class="container">
+
+        <div class="left">
+            <h2>Sidebar</h2>
+            <p>Home</p>
+            <p>About</p>
+            <p>Services</p>
+            <p>Contact</p>
+        </div>
+
+        <div class="right">
+            <h2>Main Content</h2>
+            <p>
+                This is the main content area. On larger screens, the sidebar and
+                content appear side by side. On smaller screens (768px or less),
+                they stack vertically.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

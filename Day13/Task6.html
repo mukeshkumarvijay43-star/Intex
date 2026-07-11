@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cards Using CSS Grid</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Grid Layout */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    border-radius:8px;
+}
+
+.card h3{
+    margin:15px 0 10px;
+}
+
+.card p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+button{
+    padding:10px 20px;
+    background:#007BFF;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+</style>
+</head>
+<body>
+
+<h1>Our Products</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Buds.jpg" alt="Wireless Buds">
+        <h3>Wireless Buds</h3>
+        <p>High-quality product with modern design.</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Headphones.jpg" alt="Headphones">
+        <h3>Headphones</h3>
+        <p>Perfect choice for everyday use.</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Bluetoothspeaker.jpg" alt="Bluetooth Speaker">
+        <h3>Bluetooth Speaker</h3>
+        <p>Reliable and affordable product.</p>
+        <button>Buy Now</button>
+    </div>
+
+    <div class="card">
+        <img src="Wirelessmouse.jpg" alt="Wireless Mouse">
+        <h3>Wireless Mouse</h3>
+        <p>Stylish and easy to use.</p>
+        <button>Buy Now</button>
+    </div>
+
+</div>
+
+</body>
+</html>

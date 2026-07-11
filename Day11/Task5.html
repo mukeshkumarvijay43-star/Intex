@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Areas with Different Colors</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgreen;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: lightblue;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: orange;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>Header</h2>
+        </div>
+
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Navigation Menu</p>
+        </div>
+
+        <div class="content">
+            <h2>Content</h2>
+            <p>This is the main content area.</p>
+        </div>
+
+        <div class="footer">
+            <h3>Footer</h3>
+        </div>
+
+    </div>
+
+</body>
+</html>

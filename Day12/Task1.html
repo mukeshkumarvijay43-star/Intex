@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color using Media Query</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            color: navy;
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body {
+                background-color: lightcoral;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Media Query Example</h1>
+    <p>Resize the browser window to see the background color change.</p>
+
+</body>
+</html>

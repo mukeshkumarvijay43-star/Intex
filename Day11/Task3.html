@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2-Column Grid Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas: "sidebar content";
+            height: 100vh;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is a simple two-column layout created using CSS Grid Areas.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Website Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .sidebar a:hover {
+            color: blue;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>My Website</h2>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+            <h2>Welcome</h2>
+
+            <p>Welcome to our website. This is the main content section.</p>
+
+            <p>Here you can find information about our services, projects, and latest updates.</p>
+
+            <p>This layout is created using <strong>CSS Grid</strong> and <strong>grid-template-areas</strong> with internal CSS only.</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 My Website | All Rights Reserved
+        </div>
+
+    </div>
+
+</body>
+</html>

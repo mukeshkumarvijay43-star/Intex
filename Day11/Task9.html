@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Grid Area Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Desktop Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            min-height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+
+        /* Mobile Layout */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr auto;
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "content"
+                    "footer";
+            }
+
+            .sidebar {
+                text-align: center;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>My Website</h2>
+        </div>
+
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="content">
+            <h2>Welcome</h2>
+            <p>This is the main content area of the website.</p>
+            <p>Resize the browser window to see the responsive grid layout.</p>
+        </div>
+
+        <div class="footer">
+            © 2026 My Website
+        </div>
+
+    </div>
+
+</body>
+</html>

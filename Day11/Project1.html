@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Layout Template</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Grid Container */
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            height: 100vh;
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar h3 {
+            margin-top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 12px 0;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            color: blue;
+        }
+
+        /* Content */
+        .content {
+            grid-area: content;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>My Website</h2>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <h2>Welcome</h2>
+            <p>
+                This is the main content section of the website.
+                The layout is created using CSS Grid with
+                <strong>grid-template-areas</strong>.
+            </p>
+
+            <p>
+                The header spans the full width, the sidebar appears on the
+                left, the content is on the right, and the footer spans the
+                bottom of the page.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2026 My Website | All Rights Reserved
+        </div>
+
+    </div>
+
+</body>
+</html>

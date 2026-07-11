@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Theme Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    transition:all 0.3s ease;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#121212;
+    color:#ffffff;
+}
+
+/* Navbar */
+nav{
+    background:#1f1f1f;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#00c3ff;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 15px;
+    border-radius:5px;
+}
+
+nav a:hover{
+    background:#00c3ff;
+    color:#121212;
+    transform:translateY(-2px);
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:20px;
+    background:#181818;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:600px;
+    margin-bottom:25px;
+    color:#cccccc;
+}
+
+.hero button{
+    padding:12px 24px;
+    background:#00c3ff;
+    color:#121212;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.hero button:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 20px rgba(0,195,255,.4);
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px;
+}
+
+.card{
+    background:#1f1f1f;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 30px rgba(0,195,255,.35);
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card p{
+    color:#cccccc;
+}
+
+/* Contact */
+.contact{
+    padding:40px;
+}
+
+form{
+    max-width:600px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    background:#2a2a2a;
+    color:#ffffff;
+    border:1px solid #444;
+    border-radius:5px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#aaaaaa;
+}
+
+button{
+    padding:12px 24px;
+    background:#00c3ff;
+    color:#121212;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,195,255,.4);
+}
+
+/* Footer */
+footer{
+    background:#1f1f1f;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Mukesh Tech</div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to Mukesh Tech</h1>
+    <p>Create modern, responsive websites with HTML, CSS, and JavaScript.</p>
+    <button>Get Started</button>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>💻 Web Design</h3>
+        <p>Modern and responsive website design.</p>
+    </div>
+
+    <div class="card">
+        <h3>📱 Responsive Layout</h3>
+        <p>Optimized for mobile, tablet, and desktop.</p>
+    </div>
+
+    <div class="card">
+        <h3>🚀 SEO</h3>
+        <p>Improve search engine visibility.</p>
+    </div>
+</section>
+
+<section class="contact">
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 Mukesh Tech. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

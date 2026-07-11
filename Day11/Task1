@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Grid Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "footer footer";
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>Website Header</h2>
+        </div>
+
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content area created using CSS Grid.</p>
+        </div>
+
+        <div class="footer">
+            © 2026 My Website
+        </div>
+
+    </div>
+
+</body>
+</html>

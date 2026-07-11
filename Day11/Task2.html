@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Full Width Header */
+        .header {
+            background-color: navy;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 80px);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 220px;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        .card {
+            width: 180px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+            background-color: white;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Dashboard Header</h1>
+    </div>
+
+    <!-- Sidebar + Content -->
+    <div class="container">
+
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+        </div>
+
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This content appears beside the sidebar.</p>
+
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+        </div>
+
+    </div>
+
+</body>
+</html>

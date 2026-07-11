@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky Navbar</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+/* Sticky Navbar */
+nav{
+    position:sticky;
+    top:0;
+    width:100%;
+    background:#1f1f1f;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo{
+    color:#00bfff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:#fff;
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    background:#00bfff;
+    color:#000;
+}
+
+/* Sample Sections */
+section{
+    padding:80px 20px;
+    min-height:100vh;
+}
+
+.hero{
+    background:#e3f2fd;
+}
+
+.services{
+    background:#f5f5f5;
+}
+
+.contact{
+    background:#e8f5e9;
+}
+
+/* Mobile */
+@media(max-width:768px){
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        flex-direction:column;
+        margin-top:10px;
+    }
+
+    nav ul li{
+        margin:10px 0;
+    }
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Mukesh Tech</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home" class="hero">
+    <h1>Hero Section</h1>
+    <p>Scroll down to see the sticky navbar.</p>
+</section>
+
+<section id="services" class="services">
+    <h1>Services</h1>
+    <p>Our services are listed here.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h1>Contact</h1>
+    <p>Get in touch with us.</p>
+</section>
+
+</body>
+</html>
