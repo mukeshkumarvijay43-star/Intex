@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Attempt System</title>
+</head>
+<body>
+
+<script>
+    let correctUsername = "admin";
+    let correctPassword = "1234";
+
+    for (let attempt = 1; attempt <= 3; attempt++) {
+
+        let username = prompt("Enter Username:");
+        let password = prompt("Enter Password:");
+
+        if (username === correctUsername && password === correctPassword) {
+            console.log("Login Successful");
+            break;
+        } else {
+            if (attempt === 3) {
+                console.log("System Locked");
+            } else {
+                console.log("Login Failed. Attempts Left: " + (3 - attempt));
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
