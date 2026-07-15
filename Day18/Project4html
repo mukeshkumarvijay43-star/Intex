@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart Total</title>
+</head>
+<body>
+
+<script>
+    function calculateTotal(price1, price2, price3) {
+        return price1 + price2 + price3;
+    }
+
+    let total = calculateTotal(500, 300, 200);
+
+    console.log("Total Price = " + total);
+</script>
+
+</body>
+</html>

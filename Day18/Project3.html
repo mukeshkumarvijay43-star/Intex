@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body>
+
+<script>
+    function getGrade(marks) {
+        if (marks >= 90) {
+            return "Grade A";
+        } else if (marks >= 75) {
+            return "Grade B";
+        } else if (marks >= 50) {
+            return "Grade C";
+        } else {
+            return "Grade F";
+        }
+    }
+
+    let result = getGrade(82);
+    console.log(result);
+</script>
+
+</body>
+</html>

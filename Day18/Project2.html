@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Validation System</title>
+</head>
+<body>
+
+<script>
+    function login(username, password) {
+        let validUsername = "admin";
+        let validPassword = "1234";
+
+        if (username === validUsername && password === validPassword) {
+            return "Login Successful";
+        } else {
+            return "Invalid Username or Password";
+        }
+    }
+
+    console.log(login("admin", "1234"));
+</script>
+
+</body>
+</html>
