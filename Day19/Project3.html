@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart System</title>
+</head>
+<body>
+
+<script>
+    let cart = ["Laptop", "Mouse", "Keyboard"];
+
+    // Add items
+    cart.push("Headphones");
+    cart.push("Monitor");
+
+    // Remove one item
+    cart.pop();
+
+    // Display cart items
+    console.log("Shopping Cart:");
+    for (let item of cart) {
+        console.log(item);
+    }
+
+    // Show total count
+    console.log("Total Items: " + cart.length);
+</script>
+
+</body>
+</html>
