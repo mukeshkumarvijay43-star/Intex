@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Data Simulator</title>
+</head>
+<body>
+
+<script>
+    let apiData = {
+        users: [
+            {
+                id: 1,
+                name: "Mukesh",
+                age: 20
+            },
+            {
+                id: 2,
+                name: "Rahul",
+                age: 22
+            }
+        ],
+
+        products: [
+            {
+                id: 101,
+                name: "Laptop",
+                price: 50000
+            },
+            {
+                id: 102,
+                name: "Mobile",
+                price: 20000
+            }
+        ],
+
+        courses: [
+            {
+                id: 201,
+                name: "HTML",
+                duration: "1 Month"
+            },
+            {
+                id: 202,
+                name: "JavaScript",
+                duration: "2 Months"
+            }
+        ]
+    };
+
+    console.log(JSON.stringify(apiData, null, 2));
+</script>
+
+</body>
+</html>

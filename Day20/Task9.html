@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convert JSON to Object</title>
+</head>
+<body>
+
+<script>
+    let jsonData = '{"name":"Mukesh","age":20,"course":"BCA","marks":90}';
+
+    let student = JSON.parse(jsonData);
+
+    console.log(student);
+    console.log("Name: " + student.name);
+    console.log("Age: " + student.age);
+    console.log("Course: " + student.course);
+    console.log("Marks: " + student.marks);
+</script>
+
+</body>
+</html>
