@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Grid Header</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            padding:30px;
+        }
+
+        .header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background:white;
+            padding:15px 20px;
+            border-radius:8px;
+            box-shadow:0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .title{
+            font-size:24px;
+            font-weight:bold;
+        }
+
+        .filters{
+            display:flex;
+            gap:15px;
+            align-items:center;
+        }
+
+        .filters select{
+            padding:8px;
+        }
+
+        .filters button{
+            padding:8px 15px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .filters button:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="title">Products</div>
+
+    <div class="filters">
+        <select>
+            <option>All Categories</option>
+            <option>Electronics</option>
+            <option>Clothing</option>
+            <option>Books</option>
+        </select>
+
+        <button>Filter</button>
+    </div>
+</div>
+
+</body>
+</html>

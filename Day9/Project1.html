@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modern Navbar</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 40px;
+            background:#333;
+        }
+
+        .logo{
+            color:white;
+            font-size:24px;
+            font-weight:bold;
+            flex:1;
+        }
+
+        .menu{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            list-style:none;
+            flex:2;
+        }
+
+        .menu a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+        }
+
+        .menu a:hover{
+            color:yellow;
+        }
+
+        .btn-area{
+            flex:1;
+            display:flex;
+            justify-content:flex-end;
+        }
+
+        .btn{
+            padding:10px 20px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">MyLogo</div>
+
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <div class="btn-area">
+        <button class="btn">Login</button>
+    </div>
+</nav>
+
+</body>
+</html>
