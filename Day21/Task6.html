@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Username</title>
+</head>
+<body>
+
+<input type="text" id="username" placeholder="Enter Username">
+<button onclick="showUsername()">Show Username</button>
+
+<h2 id="result"></h2>
+
+<script>
+    function showUsername() {
+        let username = document.getElementById("username").value;
+        document.getElementById("result").innerHTML = "Username: " + username;
+    }
+</script>
+
+</body>
+</html>

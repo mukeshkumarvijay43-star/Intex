@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .card {
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2 id="name">Name: Mukesh</h2>
+    <p id="age">Age: 20</p>
+    <p id="city">City: Chennai</p>
+
+    <button onclick="updateProfile()">Update Profile</button>
+</div>
+
+<script>
+    function updateProfile() {
+        document.getElementById("name").innerHTML = "Name: Rahul";
+        document.getElementById("age").innerHTML = "Age: 22";
+        document.getElementById("city").innerHTML = "City: Coimbatore";
+    }
+</script>
+
+</body>
+</html>

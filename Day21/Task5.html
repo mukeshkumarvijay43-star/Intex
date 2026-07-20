@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Div Background Color</title>
+    <style>
+        #box {
+            width: 250px;
+            height: 150px;
+            background-color: lightgray;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">My Div</div>
+
+<button onclick="changeColor()">Change Background</button>
+
+<script>
+    function changeColor() {
+        document.getElementById("box").style.backgroundColor = "lightblue";
+    }
+</script>
+
+</body>
+</html>

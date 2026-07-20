@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .profile {
+            width: 250px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="profile">
+    <h2 id="name">Name: Mukesh</h2>
+    <p id="age">Age: 20</p>
+
+    <button onclick="changeProfile()">View Profile</button>
+</div>
+
+<script>
+    function changeProfile() {
+        document.getElementById("name").innerHTML = "Name: Rahul";
+        document.getElementById("age").innerHTML = "Age: 22";
+    }
+</script>
+
+</body>
+</html>

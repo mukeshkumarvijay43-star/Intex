@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Display App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Message Display App</h2>
+
+<input type="text" id="message" placeholder="Enter your message">
+<button onclick="showMessage()">Show Message</button>
+
+<p id="output"></p>
+
+<script>
+    function showMessage() {
+        let message = document.getElementById("message").value;
+        document.getElementById("output").innerHTML = message;
+    }
+</script>
+
+</body>
+</html>

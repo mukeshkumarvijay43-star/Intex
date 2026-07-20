@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Info Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #product {
+            margin-top: 20px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Product Info Display</h2>
+
+<button onclick="showProduct()">Show Product</button>
+
+<div id="product"></div>
+
+<script>
+    function showProduct() {
+        document.getElementById("product").innerHTML =
+            "<h3>Laptop</h3>" +
+            "<p><b>Price:</b> ₹50,000</p>" +
+            "<p><b>Category:</b> Electronics</p>" +
+            "<p><b>Stock:</b> 25</p>";
+    }
+</script>
+
+</body>
+</html>
