@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create List Item Dynamically</title>
+</head>
+<body>
+
+<h2>My List</h2>
+
+<ul id="myList">
+    <li>Apple</li>
+    <li>Banana</li>
+</ul>
+
+<button onclick="addItem()">Add Item</button>
+
+<script>
+    function addItem() {
+        let li = document.createElement("li");
+        li.textContent = "Orange";
+        document.getElementById("myList").appendChild(li);
+    }
+</script>
+
+</body>
+</html>

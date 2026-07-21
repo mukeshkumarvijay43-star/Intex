@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Append Paragraph to Div</title>
+</head>
+<body>
+
+<div id="container">
+    <h2>My Container</h2>
+</div>
+
+<button onclick="appendParagraph()">Add Paragraph</button>
+
+<script>
+    function appendParagraph() {
+        let para = document.createElement("p");
+        para.textContent = "This paragraph was appended using JavaScript.";
+        document.getElementById("container").appendChild(para);
+    }
+</script>
+
+</body>
+</html>

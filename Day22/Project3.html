@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Theme Switcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            transition: 0.5s;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #messages {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="heading">Light Theme</h1>
+
+<button onclick="changeTheme()">Switch Theme</button>
+
+<div id="messages"></div>
+
+<script>
+    function changeTheme() {
+        // Change colors
+        document.body.style.backgroundColor = "#222";
+        document.body.style.color = "white";
+
+        // Update heading
+        document.getElementById("heading").innerHTML = "Dark Theme Enabled";
+
+        // Append message
+        let message = document.createElement("p");
+        message.textContent = "Theme changed successfully!";
+        document.getElementById("messages").appendChild(message);
+    }
+</script>
+
+</body>
+</html>
