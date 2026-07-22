@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Profile Preview</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            display:flex;
+            gap:30px;
+            align-items:flex-start;
+        }
+
+        .form{
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .form input{
+            width:250px;
+            padding:10px;
+            margin:10px 0;
+        }
+
+        .card{
+            width:250px;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 2px 8px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="form">
+        <h2>Enter Details</h2>
+
+        <input type="text" id="name" placeholder="Enter Name">
+        <br>
+
+        <input type="number" id="age" placeholder="Enter Age" min="18" max="100">
+    </div>
+
+    <div class="card">
+        <h2 id="profileName">Name: --</h2>
+        <p id="profileAge">Age: --</p>
+    </div>
+
+</div>
+
+<script>
+    let nameInput = document.getElementById("name");
+    let ageInput = document.getElementById("age");
+
+    nameInput.addEventListener("input", function () {
+        document.getElementById("profileName").textContent =
+            "Name: " + nameInput.value;
+    });
+
+    ageInput.addEventListener("input", function () {
+        document.getElementById("profileAge").textContent =
+            "Age: " + ageInput.value;
+    });
+</script>
+
+</body>
+</html>

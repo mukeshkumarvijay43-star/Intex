@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keyup Event Example</title>
+</head>
+<body>
+
+<h2>Keyup Event</h2>
+
+<input type="text" id="textBox" placeholder="Type here...">
+
+<p id="output">Typed text will appear here.</p>
+
+<script>
+    document.getElementById("textBox").addEventListener("keyup", function () {
+        document.getElementById("output").innerHTML = this.value;
+    });
+</script>
+
+</body>
+</html>

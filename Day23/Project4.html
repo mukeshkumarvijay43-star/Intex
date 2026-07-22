@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Search Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Product Search</h2>
+
+<input type="text" id="searchBox" placeholder="Search product...">
+
+<p id="result">Search: </p>
+
+<script>
+    let searchBox = document.getElementById("searchBox");
+    let result = document.getElementById("result");
+
+    searchBox.addEventListener("input", function () {
+        result.textContent = "Search: " + searchBox.value;
+    });
+</script>
+
+</body>
+</html>

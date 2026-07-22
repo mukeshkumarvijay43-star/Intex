@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cool Theme Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #01579b;
+            text-align: center;
+            padding-top: 100px;
+            transition: 0.5s;
+        }
+
+        h1 {
+            transition: 0.5s;
+        }
+
+        button {
+            background-color: #00acc1;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="heading">Cool Theme</h1>
+
+<button id="themeBtn">Change Theme</button>
+
+<script>
+    const button = document.getElementById("themeBtn");
+
+    // Change theme on click
+    button.addEventListener("click", function () {
+        document.body.style.backgroundColor = "#1e3a5f";
+        document.body.style.color = "#b3e5fc";
+        document.getElementById("heading").innerHTML = "Dark Cool Theme";
+        button.style.backgroundColor = "#0288d1";
+    });
+
+    // Mouseover effect
+    button.addEventListener("mouseover", function () {
+        button.style.backgroundColor = "#26c6da";
+    });
+
+    // Mouseout effect
+    button.addEventListener("mouseout", function () {
+        button.style.backgroundColor = "#00acc1";
+    });
+</script>
+
+</body>
+</html>

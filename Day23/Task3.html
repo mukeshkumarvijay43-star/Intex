@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover Event</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 50px auto;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">Move Mouse Here</div>
+
+<script>
+    document.getElementById("box").addEventListener("mouseover", function () {
+        this.style.backgroundColor = "orange";
+        this.innerHTML = "Mouse Over!";
+    });
+</script>
+
+</body>
+</html>

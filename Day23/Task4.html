@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseout Event</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            text-align: center;
+            line-height: 100px;
+            margin: 50px auto;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="box">Move Mouse Away</div>
+
+<script>
+    document.getElementById("box").addEventListener("mouseout", function () {
+        this.style.backgroundColor = "lightblue";
+        this.innerHTML = "Mouse Out!";
+    });
+</script>
+
+</body>
+</html>
