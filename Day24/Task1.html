@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Validation</title>
+</head>
+<body>
+
+<h2>Name Validation</h2>
+
+<input type="text" id="name" placeholder="Enter your name">
+<button id="submitBtn">Submit</button>
+
+<p id="message"></p>
+
+<script>
+    document.getElementById("submitBtn").addEventListener("click", function () {
+        let name = document.getElementById("name").value.trim();
+
+        if (name === "") {
+            document.getElementById("message").textContent = "Name cannot be empty!";
+            document.getElementById("message").style.color = "red";
+        } else {
+            document.getElementById("message").textContent = "Welcome, " + name + "!";
+            document.getElementById("message").style.color = "green";
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        form {
+            width: 320px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #success {
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registerForm">
+
+    <label>Name:</label><br>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div>
+
+    <label>Email:</label><br>
+    <input type="email" id="email">
+    <div id="emailError" class="error"></div>
+
+    <label>Password:</label><br>
+    <input type="password" id="password">
+    <div id="passwordError" class="error"></div>
+
+    <label>Confirm Password:</label><br>
+    <input type="password" id="confirmPassword">
+    <div id="confirmError" class="error"></div>
+
+    <button type="submit">Register</button>
+
+</form>
+
+<p id="success"></p>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    // Clear previous messages
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+    document.getElementById("passwordError").textContent = "";
+    document.getElementById("confirmError").textContent = "";
+    document.getElementById("success").textContent = "";
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let valid = true;
+
+    if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        valid = false;
+    }
+
+    if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required.";
+        valid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Enter a valid email address.";
+        valid = false;
+    }
+
+    if (password === "") {
+        document.getElementById("passwordError").textContent = "Password is required.";
+        valid = false;
+    } else if (password.length < 8) {
+        document.getElementById("passwordError").textContent = "Password must be at least 8 characters.";
+        valid = false;
+    }
+
+    if (confirmPassword === "") {
+        document.getElementById("confirmError").textContent = "Confirm Password is required.";
+        valid = false;
+    } else if (password !== confirmPassword) {
+        document.getElementById("confirmError").textContent = "Passwords do not match.";
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("success").textContent =
+            "Registration Successful!";
+    }
+
+});
+</script>
+
+</body>
+</html>

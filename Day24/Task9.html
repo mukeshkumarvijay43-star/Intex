@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Error Messages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        input {
+            width: 250px;
+            padding: 8px;
+            margin-top: 5px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="myForm">
+    <label>Name:</label><br>
+    <input type="text" id="name">
+    <div id="nameError" class="error"></div>
+
+    <label>Email:</label><br>
+    <input type="email" id="email">
+    <div id="emailError" class="error"></div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("nameError").textContent = "";
+    document.getElementById("emailError").textContent = "";
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let isValid = true;
+
+    if (name === "") {
+        document.getElementById("nameError").textContent = "Name is required.";
+        isValid = false;
+    }
+
+    if (email === "") {
+        document.getElementById("emailError").textContent = "Email is required.";
+        isValid = false;
+    } else if (!emailPattern.test(email)) {
+        document.getElementById("emailError").textContent = "Enter a valid email.";
+        isValid = false;
+    }
+
+    if (isValid) {
+        alert("Form submitted successfully!");
+    }
+});
+</script>
+
+</body>
+</html>

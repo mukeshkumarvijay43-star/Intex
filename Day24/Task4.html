@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Age Validation</title>
+</head>
+<body>
+
+<h2>Age Checker</h2>
+
+<input type="number" id="age" placeholder="Enter your age">
+<button id="checkBtn">Check</button>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("checkBtn").addEventListener("click", function () {
+
+    let age = Number(document.getElementById("age").value);
+    let message = document.getElementById("message");
+
+    if (age >= 18) {
+        message.textContent = "You are eligible to vote.";
+        message.style.color = "green";
+    } else {
+        message.textContent = "You must be at least 18 years old.";
+        message.style.color = "red";
+    }
+
+});
+</script>
+
+</body>
+</html>

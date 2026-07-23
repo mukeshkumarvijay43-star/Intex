@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        form {
+            width: 350px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        #success {
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Checkout Form</h2>
+
+<form id="checkoutForm">
+
+    <label>Address:</label><br>
+    <textarea id="address" rows="3"></textarea>
+    <div id="addressError" class="error"></div>
+
+    <label>Phone:</label><br>
+    <input type="text" id="phone">
+    <div id="phoneError" class="error"></div>
+
+    <label>Pincode:</label><br>
+    <input type="text" id="pincode">
+    <div id="pincodeError" class="error"></div>
+
+    <button type="submit">Place Order</button>
+
+</form>
+
+<p id="success"></p>
+
+<script>
+document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("addressError").textContent = "";
+    document.getElementById("phoneError").textContent = "";
+    document.getElementById("pincodeError").textContent = "";
+    document.getElementById("success").textContent = "";
+
+    let address = document.getElementById("address").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let pincode = document.getElementById("pincode").value.trim();
+
+    let valid = true;
+
+    if (address === "") {
+        document.getElementById("addressError").textContent = "Address is required.";
+        valid = false;
+    }
+
+    if (phone === "") {
+        document.getElementById("phoneError").textContent = "Phone number is required.";
+        valid = false;
+    }
+
+    if (pincode === "") {
+        document.getElementById("pincodeError").textContent = "Pincode is required.";
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("success").textContent = "Order Placed Successfully!";
+    }
+});
+</script>
+
+</body>
+</html>

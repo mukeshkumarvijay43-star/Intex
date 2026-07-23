@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        input {
+            width: 250px;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Signup Form</h2>
+
+<input type="text" id="name" placeholder="Enter Name"><br>
+
+<input type="email" id="email" placeholder="Enter Email"><br>
+
+<input type="password" id="password" placeholder="Enter Password"><br>
+
+<input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
+
+<button id="signupBtn">Sign Up</button>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("signupBtn").addEventListener("click", function () {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    let message = document.getElementById("message");
+
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (name === "" || email === "" || password === "" || confirmPassword === "") {
+        message.textContent = "All fields are required!";
+        message.style.color = "red";
+    } else if (!emailPattern.test(email)) {
+        message.textContent = "Enter a valid email address!";
+        message.style.color = "red";
+    } else if (password.length < 8) {
+        message.textContent = "Password must be at least 8 characters!";
+        message.style.color = "red";
+    } else if (password !== confirmPassword) {
+        message.textContent = "Passwords do not match!";
+        message.style.color = "red";
+    } else {
+        message.textContent = "Signup Successful!";
+        message.style.color = "green";
+    }
+
+});
+</script>
+
+</body>
+</html>

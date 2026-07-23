@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Validation</title>
+</head>
+<body>
+
+<h2>Email Validation</h2>
+
+<input type="email" id="email" placeholder="Enter your email">
+<button id="checkBtn">Validate</button>
+
+<p id="message"></p>
+
+<script>
+document.getElementById("checkBtn").addEventListener("click", function () {
+
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message");
+
+    // Email pattern
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email === "") {
+        message.textContent = "Email cannot be empty!";
+        message.style.color = "red";
+    } else if (!emailPattern.test(email)) {
+        message.textContent = "Please enter a valid email address!";
+        message.style.color = "red";
+    } else {
+        message.textContent = "Valid email address!";
+        message.style.color = "green";
+    }
+
+});
+</script>
+
+</body>
+</html>
