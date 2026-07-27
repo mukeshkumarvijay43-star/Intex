@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Emails</title>
+</head>
+<body>
+
+    <h2>User Emails</h2>
+    <ul id="emailList"></ul>
+
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(response => response.json())
+            .then(users => {
+                let emailList = document.getElementById("emailList");
+
+                users.forEach(user => {
+                    let li = document.createElement("li");
+                    li.textContent = user.email;
+                    emailList.appendChild(li);
+                });
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    </script>
+
+</body>
+</html>
