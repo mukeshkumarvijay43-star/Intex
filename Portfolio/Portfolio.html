@@ -131,13 +131,19 @@ Mukesh Kumar
 <h2>Contact Me</h2>
 <div class="contact-grid">
 <form id="contactForm">
-<input type="text" placeholder="Name" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Message"></textarea>
-<button class="btn primary">Send Message</button>
+    <input type="text" id="name" placeholder="Your Name" required>
+
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <textarea id="message" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
 </form>
+
+<p id="success"></p>
 <div class="contact-note">
 <p>Ready to build something together? Send a message and let's discuss your next web project.</p>
+<div id="progressBar"></div>
 </div>
 </div>
 <p id="success"></p>
@@ -146,6 +152,8 @@ Mukesh Kumar
 <footer>
 <p>© 2026 Mukesh Kumar | Python Full Stack Developer</p>
 </footer>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
