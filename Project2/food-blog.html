@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Sunday Table — A Food Journal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a href="#top" class="logo" aria-label="The Sunday Table">
+      <span class="logo-mark">S</span>
+      <div class="logo-copy">
+        <strong>The Sunday Table</strong>
+        <span>Est. 2019</span>
+      </div>
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#recipes">Recipes</a>
+      <a href="#about">About</a>
+      <a href="#newsletter">Journal</a>
+      <a href="#" id="surpriseBtn">Surprise Me</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="bg-slideshow" aria-hidden="true">
+    <div class="bg-slide active" style="background-image:url('background1.jpg');"></div>
+    <div class="bg-slide" style="background-image:url('background2.png');"></div>
+    <div class="bg-slide" style="background-image:url('background3.webp');"></div>
+    <div class="bg-slide" style="background-image:url('background4.jpg');"></div>
+    <div class="bg-slide" style="background-image:url('background5.jpg');"></div>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">A weekly food journal</p>
+      <h1>Recipes worth <em>slowing down</em> for.</h1>
+      <p class="lede">Notes, mistakes, and second attempts from a home kitchen — mostly vegetables, always butter, occasionally burnt. New recipe every Sunday.</p>
+      <div class="hero-actions">
+        <a href="#recipes" class="btn">Browse Recipes</a>
+        <a href="#newsletter" class="btn ghost">Join the Journal</a>
+      </div>
+    </div>
+    <div class="hero-side">
+      <div class="hero-media">
+        <img src="Brown Butter Miso Cookies.jpg" alt="A rustic food table" loading="lazy">
+      </div>
+      <div class="index-card">
+        <p class="tag">This Week's Card No. 042</p>
+        <h3>Brown Butter Miso Cookies</h3>
+        <div class="meta">
+          <span>⏱ 35 min</span>
+          <span>🍽 Makes 18</span>
+          <span>★ Easy</span>
+        </div>
+        <hr>
+        <ul class="ingredients">
+          <li>brown butter</li>
+          <li>white miso</li>
+          <li>demerara sugar</li>
+          <li>flaky salt</li>
+          <li>dark chocolate</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="categories">
+  <div class="cat-row" id="catRow">
+    <button class="chip active" data-cat="all">All</button>
+    <button class="chip" data-cat="breakfast">Breakfast</button>
+    <button class="chip" data-cat="mains">Mains</button>
+    <button class="chip" data-cat="baking">Baking</button>
+    <button class="chip" data-cat="drinks">Drinks</button>
+  </div>
+</div>
+
+<section class="section" id="recipes">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">From the archive</p>
+        <h2>Latest from the kitchen</h2>
+      </div>
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" id="searchInput" placeholder="Search recipes...">
+      </div>
+    </div>
+
+    <div class="grid" id="recipeGrid"></div>
+    <p class="no-results" id="noResults">No recipes match that search — try "lemon," or clear the filter.</p>
+  </div>
+</section>
+
+<section class="feature" id="about">
+  <div class="wrap">
+    <div class="portrait">
+      <img src="chef.png" alt="The kitchen, most mornings">
+    </div>
+    <div>
+      <p class="eyebrow" style="color:var(--mustard);">About the journal</p>
+      <h2>Written from a small kitchen with a big oven mitt collection.</h2>
+      <p>The Sunday Table started as a weekly email to three friends and turned into a habit neither of us knew we needed. Every recipe here has been made at least twice â€” once to get it wrong, once to write it down properly.</p>
+      <div class="stats">
+        <div><strong>210+</strong><span>Recipes Logged</span></div>
+        <div><strong>6 yrs</strong><span>Running Weekly</span></div>
+        <div><strong>18k</strong><span>Sunday Readers</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <p class="eyebrow" style="color:#fff; opacity:0.85;">Every Sunday, 8am</p>
+  <h2>One recipe. No spam. Ever.</h2>
+  <p>Get the week's recipe card, a short note from the kitchen, and nothing else.</p>
+  <form class="sub-form" id="subForm">
+    <input type="email" id="subEmail" placeholder="you@example.com" required>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="form-msg" id="formMsg"></p>
+</section>
+<footer>
+  <div class="foot-grid">
+    <div>
+      <a href="#top" class="logo">The Sunday Table</a>
+      <p class="about">A weekly food journal about cooking slowly, eating seasonally, and the recipes that actually get repeated.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#recipes">Recipes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#newsletter">Journal</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="#recipes" data-scrollcat="breakfast">Breakfast</a></li>
+        <li><a href="#recipes" data-scrollcat="mains">Mains</a></li>
+        <li><a href="#recipes" data-scrollcat="baking">Baking</a></li>
+        <li><a href="#recipes" data-scrollcat="drinks">Drinks</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 The Sunday Table</span>
+    <span>Made with butter and patience</span>
+  </div>
+</footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
